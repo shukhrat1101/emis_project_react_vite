@@ -1,0 +1,68 @@
+.tlt-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tlt-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tlt-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(35, 54, 85, 0.18);
+  border-top-color: #0b84ff;
+  border-radius: 50%;
+  animation: tlt-spin 0.8s linear infinite;
+}
+
+@keyframes tlt-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tlt-empty {
+  font-size: 14px;
+  font-weight: 600;
+  color: #233655;
+  background: rgba(11, 132, 255, 0.08);
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+.tlt-scroll {
+  max-height: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding-right: 2px;
+}
+
+.tlt-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.tlt-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.tlt-scroll::-webkit-scrollbar-thumb {
+  background: rgba(11, 132, 255, 0.28);
+  border-radius: 8px;
+}
+.tlt-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 132, 255, 0.4);
+}
+
+.tlt-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(11, 132, 255, 0.35) transparent;
+}
+
+.tlt-table {
+  width: 100%;
+  border-collapse: collapse;
+}

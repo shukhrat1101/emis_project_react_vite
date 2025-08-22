@@ -1,0 +1,110 @@
+.branch-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.branch-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 95%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  h3 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    label {
+      font-weight: 500;
+      margin-bottom: 6px;
+      display: block;
+      font-size: 14px;
+    }
+
+    .react-select-container {
+      .react-select__control {
+        border-radius: 6px;
+        min-height: 40px;
+      }
+
+      .react-select__single-value {
+        font-size: 14px;
+      }
+    }
+
+    .branch-input-group {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        padding: 10px 12px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        outline: none;
+
+        &:focus {
+          border-color: #2563eb;
+          box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+        }
+      }
+    }
+
+    .branch-modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 10px;
+
+      .submit {
+        background: #3b598a;
+        color: white;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+          background: #1b4f72;
+        }
+      }
+
+      .cancel {
+        background: #e5e7eb;
+        color: #374151;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+          background: #d1d5db;
+        }
+      }
+    }
+  }
+}
+
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: 2px;
+}
+.position-select-item {
+  margin-bottom: 10px;
+}

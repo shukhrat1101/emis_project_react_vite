@@ -1,0 +1,43 @@
+.men-page {
+  padding: 20px;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      .title {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: #2c3e50;
+      }
+    }
+
+    .header-bottom {
+      .search-full,
+      .searchbar {
+        width: 21%;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .men-page .header .header-top {
+    flex-direction: column;
+    align-items: stretch;
+
+    .add-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    thead {
+      background-color: rgba(119, 159, 228, 0.53);
+
+      tr {
+        th {
+          padding: 12px 16px;
+          text-align: left;
+          color: #2c3e50;
+          font-weight: 600;
+          border-bottom: 1px solid #dcdde1;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #f0f4f8;
+        }
+
+        td {
+          padding: 12px 16px;
+          border-bottom: 1px solid #e1e8ed;
+          vertical-align: middle;
+
+          &.clickable {
+            color: #2e86de;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:hover {
+              color: #1b4f72;
+            }
+          }
+
+          &.actions {
+            padding: 8px 16px;
+            border-bottom: 1px solid #e1e8ed;
+            text-align: center;
+
+            .actions-inner {
+              display: flex;
+              justify-content: flex-end;
+              gap: 12px;
+              padding-right: 20px;
+            }
+
+            .btn {
+              width: 32px;
+              height: 32px;
+              padding: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 16px;
+              border: none;
+              border-radius: 6px;
+              cursor: pointer;
+              transition: background-color 0.2s ease;
+
+              &.edit {
+                background-color: #1b4f72;
+                color: #fff;
+
+                &:hover {
+                  background-color: #233655;
+                }
+              }
+
+              &.delete {
+                background-color: #ef4444;
+                color: white;
+
+                &:hover {
+                  background-color: #c0392b;
+                }
+              }
+
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #1b4f72;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  svg {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background-color: #233655;
+  }
+}
+
+
+.amal {
+  text-align: right !important;
+  padding-right: 50px !important;
+}
+
+.btn {
+  &.detail {
+    background-color: #1b4f72;
+    color: #ffffff;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    &:hover {
+      background-color: #233655;
+    }
+
+    &:active {
+      background-color: #233655;
+    }
+
+    &:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+  }
+  &.detail1 {
+    background-color: #1b4f72;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-left: 28px;
+
+    &:hover {
+      background-color: #233655;
+    }
+
+    &:active {
+      background-color: #233655;
+    }
+
+    &:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+  }
+}
+

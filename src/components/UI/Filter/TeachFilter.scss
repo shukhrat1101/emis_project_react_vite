@@ -1,0 +1,22 @@
+.teach-filter{
+  display:flex;
+  gap:2px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.tf-field{
+  min-width:210px;
+  display:flex;
+  align-items:center;
+  margin:0;
+}
+
+.teach-filter .rs__control{
+  margin:0 !important;
+}
+
+@media (max-width:560px){
+  .tf-field{ min-width:180px; }
+  .teach-filter{ gap:4px; }
+}

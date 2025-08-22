@@ -1,0 +1,11 @@
+.header.header--with-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.command-search {
+  width: min(340px, 60vw);
+}
+

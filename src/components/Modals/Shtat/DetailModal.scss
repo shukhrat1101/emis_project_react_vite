@@ -1,0 +1,116 @@
+.shtat-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.shtat-detail-modal {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 800px;
+  max-width: 95%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.shtat-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  h3 {
+    text-align: center;
+    color: #2c3e50;
+    flex-grow: 1;
+  }
+
+  .shtat-detail-close-btn {
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+  }
+}
+
+.shtat-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    background-color: rgba(119, 159, 228, 0.53);
+    color: #2c3e50;
+
+    th {
+      padding: 10px;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 8px;
+        vertical-align: top;
+        border-top: 1px solid #e0e0e0;
+
+        ul {
+          margin: 0;
+          padding-left: 20px;
+
+          li {
+            list-style-type: disc;
+            color: #34495e;
+            font-size: 14px;
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+}
+
+.shtat-detail-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+
+  .submit {
+    background-color: #3b598a;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #1b4f72;
+    }
+  }
+
+  .cancel {
+    background-color: #bdc3c7;
+    color: black;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #a0a4a8;
+    }
+  }
+}

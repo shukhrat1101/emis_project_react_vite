@@ -1,0 +1,290 @@
+/* src/components/Modals/Course/CourceSertifikatModal.scss */
+
+.cs-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(17, 24, 39, 0.5); // #111827 @ 50%
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  backdrop-filter: saturate(120%) blur(2px);
+}
+
+.cs-modal {
+  width: 560px;
+  max-width: 92vw;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow:
+    0 12px 28px rgba(17, 24, 39, 0.18),
+    0 2px 6px rgba(17, 24, 39, 0.12);
+  padding: 18px 18px 16px;
+  animation: cs-pop 160ms ease-out both;
+}
+
+@keyframes cs-pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cs-title {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #23324a;
+  letter-spacing: 0.2px;
+}
+
+.cs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cs-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="file"] {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #111827;
+    background: #fff;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+
+    &:hover {
+      border-color: #b6beca;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #395977;
+      box-shadow: 0 0 0 3px rgba(57, 89, 119, 0.15);
+    }
+  }
+
+  input[type="file"] {
+    padding: 8px 10px;
+  }
+
+  .cs-hint {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #6b7280;
+
+    a {
+      color: #395977;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        color: #2c4963;
+      }
+    }
+  }
+}
+
+.cs-buttons {
+  margin-top: 6px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  .cs-submit,
+  .cs-cancel {
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    transition: background 0.18s ease, transform 0.04s ease, box-shadow 0.18s ease;
+
+    &:active {
+      transform: translateY(1px);
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    svg {
+      font-size: 14px;
+    }
+  }
+
+  .cs-submit {
+    background: #395977;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(57, 89, 119, 0.25);
+
+    &:hover:not(:disabled) {
+      background: #2c4963;
+      box-shadow: 0 6px 16px rgba(57, 89, 119, 0.3);
+    }
+  }
+
+  .cs-cancel {
+    background: #f3f4f6;
+    color: #374151;
+
+    &:hover:not(:disabled) {
+      background: #e5e7eb;
+    }
+  }
+}
+
+
+.cs-filebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  flex-wrap: wrap;
+
+  &:focus-within {
+    border-color: #324161;
+    box-shadow: 0 0 0 2px rgba(50, 65, 97, 0.15);
+  }
+}
+
+.cs-file-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  outline: none;
+  background: #395977;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.04s ease;
+
+  svg {
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: #2c4963;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0 3px rgba(57, 89, 119, 0.25);
+  }
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.cs-file-name {
+  flex: 1 1 220px;
+  min-width: 180px;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media (max-width: 480px) {
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+.cs-file-clear {
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  color: #374151;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.04s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: #f3f4f6;
+    border-color: #cbd5e1;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0 3px rgba(209, 213, 219, 0.5);
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-filebar {
+    gap: 8px;
+    padding: 8px 10px;
+  }
+  .cs-file-btn,
+  .cs-file-clear {
+    padding: 8px 10px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .cs-modal {
+    padding: 16px 14px;
+    border-radius: 12px;
+  }
+
+  .cs-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .cs-input-group input[type="text"],
+  .cs-input-group input[type="date"],
+  .cs-input-group input[type="file"] {
+    font-size: 13px;
+    padding: 9px 11px;
+  }
+
+  .cs-buttons .cs-submit,
+  .cs-buttons .cs-cancel {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}

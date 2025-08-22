@@ -1,0 +1,46 @@
+.safq-filter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .safq-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 8px;
+
+  }
+  .safq-label {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 600;
+  }
+  .safq-date {
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+  }
+  .safq-date:focus {
+    border-color: #395977;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  }
+  .safq-today-btn {
+    background-color: #1b4f72;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .safq-today-btn:hover {
+    background-color: #233655;
+  }
+}

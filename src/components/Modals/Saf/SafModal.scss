@@ -1,0 +1,129 @@
+.safm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.7);
+  display: grid;
+  place-items: center;
+  z-index: 1100;
+  padding: 16px;
+}
+
+.safm-modal {
+  width: min(720px, 96vw);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.35);
+}
+
+.safm-body {
+  padding: 16px;
+}
+
+.safm-title {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+  text-align: center;
+}
+
+.safm-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: #34495e;
+}
+.safm-form input[type="text"],
+.safm-form input[type="number"],
+.safm-form input[type="date"] {
+  height: 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0 12px;
+  outline: none;
+}
+.safm-form input:focus {
+  border-color: #395977;
+  box-shadow: 0 0 0 2px rgba(37,99,235,.15);
+}
+
+.safm-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.safm-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.safm-section-title {
+  margin: 8px 0 6px 0;
+  font-weight: 800;
+  color: #233655;
+}
+
+.safm-reasons {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fafafa;
+  margin-top: 6px;
+}
+.safm-reasons-head {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111827;
+}
+.safm-reason-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.safm-reason-row .right input {
+  height: 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.safm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+.safm-btn-submit {
+  background-color: #1b4f72;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.safm-btn-submit:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+.safm-btn-cancel {
+  background: #f3f4f6;
+  color: #111827;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.safm-btn-cancel:hover { background: #e5e7eb; }
+
+@media (max-width: 640px) {
+  .safm-grid-2 { grid-template-columns: 1fr; }
+  .safm-grid-3 { grid-template-columns: 1fr; }
+  .safm-reason-row { grid-template-columns: 1fr; }
+}

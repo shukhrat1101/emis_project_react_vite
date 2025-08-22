@@ -1,0 +1,33 @@
+$loader-color: #233655;
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 6px;
+
+
+  &__bar {
+    width: 8px;
+    height: 40px;
+    background-color: $loader-color;
+    border-radius: 4px;
+    animation: bounce 1s infinite ease-in-out;
+
+    &--1 { animation-delay: 0s; }
+    &--2 { animation-delay: 0.1s; }
+    &--3 { animation-delay: 0.2s; }
+    &--4 { animation-delay: 0.3s; }
+    &--5 { animation-delay: 0.4s; }
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}

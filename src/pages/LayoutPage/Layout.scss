@@ -1,0 +1,19 @@
+.layout-wrapper {
+  display: flex;
+  height: 100vh; // ✅ scroll ishlashi uchun butun ekranni qamrab oladi
+  overflow: hidden;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%; // ✅ majburiy
+  overflow: hidden;
+}
+
+.layout-content {
+  flex: 1;
+  overflow-y: auto; // ✅ faqat vertikal scroll kerak
+  padding: 6px 16px; // ichki bo‘sh joy bo‘lishi uchun
+}

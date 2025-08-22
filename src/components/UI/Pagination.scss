@@ -1,0 +1,79 @@
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.pagination-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #2c3e50;
+
+  label {
+    font-weight: 500;
+  }
+
+  select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: #2c3e50;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #2c3e50;
+      box-shadow: 0 0 0 2px rgba(46, 134, 222, 0.2);
+    }
+  }
+}
+
+
+.pagination-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  .page-btn {
+    padding: 8px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #f0f4f8;
+      border-color: #233655;
+      color: #233655;
+    }
+
+    &.active {
+      background-color: #233655;
+      color: white;
+      font-weight: bold;
+      border-color: #233655;
+    }
+  }
+
+  .dots {
+    padding: 0 8px;
+    font-size: 16px;
+    color: #999;
+    font-weight: bold;
+  }
+}
+
